@@ -28,7 +28,7 @@ const char* WIFI_SSID = "Neo Shren";
 const char* WIFI_PASS = "BiNn0#08";
 
 // --- Telegram Bot Details (UPDATED) ---
-#define BOT_TOKEN "8353797139:AAEFcnT_SP4ibbOdCiqobRwGbFF-nnL_RwM" 
+#define BOT_TOKEN "**8353797139:AAEFcnT_SP4ibbOdCiqobRwGbFF-nnL_RwM**"
 #define CHAT_ID "7418985949"
 
 // --- Security Details ---
