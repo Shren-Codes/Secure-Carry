@@ -103,19 +103,6 @@ The project integrates RFID-based access control, keypad authentication, GPS tra
 
 ---
 
-## 📸 Hardware Implementation
-
-### Hardware Prototype
-(Add hardware image here)
-
-### PCB Design
-(Add PCB image here)
-
-### Telegram Alert Demonstration
-(Add screenshot here)
-
----
-
 ## 🔮 Future Enhancements
 
 - Fingerprint Authentication
