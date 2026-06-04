@@ -1,188 +1,146 @@
-# 🎒 SecureCarry: Intelligent Smart Bag
+# 🎒 SecureCarry: IoT-Based Smart Bag Security System
 
-> An IoT-enabled smart bag security system designed to protect personal belongings through RFID authentication, GPS tracking, water leak detection, and real-time Telegram alerts.
+> An intelligent embedded security system that combines RFID authentication, GPS tracking, water intrusion monitoring, servo-based locking, and real-time Telegram notifications to protect personal belongings.
 
-![Platform](https://img.shields.io/badge/Platform-ESP32%20%7C%20ESP8266-blue)
-![Language](https://img.shields.io/badge/Language-C%2B%2B-orange)
-![IDE](https://img.shields.io/badge/IDE-Arduino-green)
-![Status](https://img.shields.io/badge/Status-Completed-success)
-
----
-
-## 📖 Overview
-
-SecureCarry is a smart embedded system that enhances bag security using IoT technologies. The system prevents unauthorized access, detects water intrusion, provides location tracking, and sends instant notifications to the owner's Telegram account.
-
-The project demonstrates the integration of embedded systems, wireless communication, sensor interfacing, and real-time alert mechanisms into a portable and practical security solution.
+![Platform](https://img.shields.io/badge/Platform-ESP32-blue)
+![Language](https://img.shields.io/badge/Language-C++-orange)
+![IoT](https://img.shields.io/badge/Domain-IoT-success)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ---
 
-## ✨ Key Features
+## 📌 Overview
+
+SecureCarry is an IoT-enabled smart bag security system developed using ESP32 and embedded technologies. The system enhances bag security through multi-layer authentication, environmental monitoring, location tracking, and real-time alert notifications.
+
+The project integrates RFID-based access control, keypad authentication, GPS tracking, water leak detection, servo-controlled locking, and Telegram Bot communication to create a portable and intelligent security solution.
+
+---
+
+## 🚀 Key Features
 
 🔐 RFID-Based Authentication
 
-📍 GPS Location Tracking using NEO-6M
+⌨️ Keypad-Based Secondary Access Control
 
-💧 Water Leak Detection with Instant Alerts
+📍 Real-Time GPS Location Tracking
 
-📲 Telegram Bot Notifications
+💧 Water Leak Detection and Monitoring
 
-🔔 Buzzer-Based Security Alerts
+📲 Telegram Bot Alert Notifications
 
-⚙️ Servo Motor Controlled Smart Lock
+🔔 Security Alerts for Unauthorized Access
 
-🌐 Wi-Fi Enabled IoT Monitoring
+🔒 Servo-Controlled Smart Locking Mechanism
 
-👜 Portable Smart Bag Security Solution
+⏱️ Automatic Re-Locking after Inactivity
+
+🌐 Wi-Fi Enabled IoT Connectivity
 
 ---
 
 ## 🛠 Hardware Components
 
-| Component | Quantity |
-|------------|------------|
-| ESP32 / ESP8266 | 1 |
-| RFID RC522 Module | 1 |
-| GPS NEO-6M Module | 1 |
-| SG90 Servo Motor | 1 |
-| Water Leak Sensors | 2 |
-| Buzzer | 1 |
-| Jumper Wires | Multiple |
-| Power Supply | 1 |
+- ESP32 WROOM
+- MFRC522 RFID Module
+- 4x3 Keypad
+- NEO-6M GPS Module
+- SG90 Servo Motor
+- Water Leak Sensor
+- Buzzer
+- Li-ion Battery
+- TP4056 Charging Module
 
 ---
 
-## 💻 Software & Libraries
+## 💻 Software Stack
 
 ### Development Environment
 - Arduino IDE
 
 ### Libraries Used
-- MFRC522
-- TinyGPSPlus
-- ESP8266WiFi
+- WiFi
 - WiFiClientSecure
 - UniversalTelegramBot
+- MFRC522
+- TinyGPS++
+- ESP32Servo
 - SPI
-- Servo
+- Keypad
 
 ---
 
-## 🏗 System Architecture
+## 🔄 Working Principle
 
-```text
-RFID Authentication
-        │
-        ▼
-   ESP32 / ESP8266
-        │
- ┌──────┼──────┐
- │      │      │
- ▼      ▼      ▼
-GPS   Water   Servo
-      Sensor   Lock
- │
- ▼
-Telegram Alerts
-```
+1. The system starts in a secure locked state.
+2. Users authenticate using an RFID card.
+3. Authorized RFID access unlocks the bag.
+4. Invalid RFID attempts are monitored continuously.
+5. After three failed RFID attempts, keypad authentication is activated.
+6. Failed authentication triggers a Telegram security alert.
+7. GPS coordinates are attached to alert notifications.
+8. Water sensors continuously monitor the bag interior.
+9. Water intrusion instantly generates an alert message.
+10. The servo lock automatically re-locks after a predefined timeout period.
 
 ---
 
-## 🚨 Alert System
-
-The system sends Telegram notifications when:
-
-- Unauthorized RFID access is detected
-- Water leakage is detected inside the bag
-- Security events occur
-
-Example Alert:
-
-```text
-⚠️ ALERT: Water Leakage Detected
-
-📍 Location:
-Latitude: XX.XXXXXX
-Longitude: YY.YYYYYY
-```
-
----
-
-## 📍 Applications
-
-- Smart Travel Luggage
-- Student Security Bags
-- Document Protection Systems
-- Electronic Equipment Bags
-- Anti-Theft Portable Storage
-
----
-
-## 📊 Project Results
+## 📊 Results
 
 ✅ Successful RFID Authentication
 
-✅ Reliable GPS Tracking
+✅ GPS-Based Location Tracking
+
+✅ Water Intrusion Detection
 
 ✅ Real-Time Telegram Alerts
 
-✅ Water Leak Detection
+✅ Automatic Locking Mechanism
 
-✅ Servo-Based Smart Locking
+✅ Reliable Embedded System Operation
 
-✅ Low-Cost Embedded Security Solution
+✅ Portable Security Solution
+
+---
+
+## 📸 Hardware Implementation
+
+### Hardware Prototype
+(Add hardware image here)
+
+### PCB Design
+(Add PCB image here)
+
+### Telegram Alert Demonstration
+(Add screenshot here)
 
 ---
 
 ## 🔮 Future Enhancements
 
 - Fingerprint Authentication
-- Mobile Application Support
+- Mobile Application Integration
 - Battery Health Monitoring
-- LoRa-Based Tracking
-- Cloud Dashboard Integration
+- LoRa-Based Long Range Tracking
+- Cloud Dashboard Monitoring
+- AI-Based Threat Detection
 
 ---
 
-## 📂 Repository Structure
+## 🎯 Engineering Skills Demonstrated
 
-```text
-SecureCarry-Intelligent-Smart-Bag
-│
-├── Code
-│   └── SecureCarryCODE.ino
-│
-├── Documentation
-│   └── SecureCarry_An_Intelligent_Bag.pdf
-│
-├── Images
-│   ├── Hardware_Setup.jpg
-│   ├── Circuit_Diagram.png
-│   ├── PCB_Layout.png
-│   └── PCB_3D_View.png
-│
-├── Demo
-│   └── Working_DEMO.mp4
-│
-└── README.md
-```
+- Embedded Systems Design
+- ESP32 Development
+- Internet of Things (IoT)
+- RFID Authentication Systems
+- GPS Integration
+- Sensor Interfacing
+- UART Communication
+- SPI Communication
+- Real-Time Monitoring
+- Event-Driven Programming
+- Telegram Bot API Integration
+- PCB Design
+- Hardware Prototyping
+- Arduino Framework
 
----
-
-## 👩‍💻 Authors
-
-**Shrenica Chawda A**  
-B.Tech Electronics and Communication Engineering  
-VIT Chennai
-
-**Lakshita M S**
-
-**Akshaya R G**
-
----
-
-## 📜 License
-
-This project is developed for academic and educational purposes.
-
-⭐ If you found this project useful, consider giving the repository a star.
