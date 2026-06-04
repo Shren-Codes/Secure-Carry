@@ -129,5 +129,4 @@ The project integrates RFID-based access control, keypad authentication, GPS tra
 - Telegram Bot API Integration
 - PCB Design
 - Hardware Prototyping
-- Arduino Framework
 
